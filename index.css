@@ -1,0 +1,222 @@
+body, html
+{
+    background-color: #F5E0D6;
+    height: 100%;
+}
+
+.heading
+{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: #F5C0FA;
+    color: black;
+    height: auto;
+    width: auto;
+}
+
+.heading > h1
+{
+    font: 50px "Lucida Console", monospace;
+}
+
+.heading > h2
+{
+    font: 25px "Courier New", monospace;
+}
+
+.personal-info
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #a1fafd;
+    height: auto;
+    width: auto;
+    font: 20px "Alata", Verdana, sans-serif;
+}
+
+.personal-info > p
+{
+    flex: 8 200px;
+}
+
+.slideshow
+{
+    position: relative;
+    margin: auto;
+    flex: 1 300px;
+}
+
+.slide
+{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fade-anim
+{
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from 
+    {
+        opacity: .4
+    }
+    to 
+    {
+        opacity: 1
+    }
+}
+
+.slide > a > img
+{
+    height: 200px;
+    width: 200px;
+}
+
+img.esports
+{
+    background-color: #e2e1dd;
+}
+
+.prev, .next 
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #DB2763;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next 
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover 
+{
+    background-color: #DB2763;
+    color: #FFDFA4;
+}
+
+.prev:active, .next:active
+{
+    background-color: #F5C0FA;
+}
+  
+.text 
+{
+    font-size: 15px;
+    font-family: "Avant Garde";
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.projects
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #F5C0FA;
+    height: auto;
+    width: auto;
+    font: 16px "Alata", Verdana, sans-serif;
+    padding-bottom: 20px;
+}
+
+.projects > a:link, .projects > a:visited
+{
+    flex: 1;
+    width: 50px;
+    border: solid 2px #db2763;
+    margin: 3%;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 0.5s;
+}
+
+.projects > a:hover
+{
+    background-color: #DB2763;
+    border-color: #FFDFA4;
+}
+
+.projects > a:active
+{
+    background-color: #a1fafd;
+}
+
+.projects > a > img
+{
+    height: auto;
+    width: 70px;
+}
+
+.contact-me
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFDFA4;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.social:link, .social:visited
+{
+    color: black;
+    border: solid 2px #db2763;
+    padding: 14px 25px;
+    font: 20px "Alata", Verdana, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Avant Garde";
+    display: inline-block;
+    transition: background-color 0.5s;
+}
+
+.social:hover
+{
+    background-color: #db2763;
+    border-color: #FFDFA4;
+}
+
+.social:active
+{
+    background-color: #e2e1dd;
+}
+
+.imgheading
+{
+    background-image: url(https://cdn.discordapp.com/attachments/1057765263820455957/1057791635787878480/IMG_7808.jpg);
+    height: 70%;
+    opacity: 0.45;
+}
+
+.imgheading, .imgpinfo, .imgprojects, .imgsocials
+{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}

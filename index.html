@@ -3,62 +3,84 @@
     <head>
         <link rel="stylesheet" href="index.css">
         <meta charset="utf-8" />
-        <title>Shaur Kumar Website Portfolio</title>
+        <title>Shaur(ya) Kumar Portfolio Website</title>
+        <script src="index.js"></script>
     </head>
-    <body>
+    <body onload="nextSlide(1)">
+        <section class="imgheading"></section>
+
         <section class="heading">
-            <h1>Shaur Kumar</h1>
-            <h2>B.S. Electrical and Computer Engineer -- Interests in Robotics, Game Development, Cybersecurity, and Data Analytics</h2>
+            <h1>Shaurya Kumar</h1>
+            <h2>"Write yourself."</h2>
+            <h2>Robotics, Cybersecurity, Data Analysis, Game Development</h2>
         </section>
+
 
         <section class="personal-info">
-            <h3>About Me</h3>
-            <p>I am currently a Junior EE and CE Student at New York University! I have worked on a number of projects
+            <p>
+            I am currently a Junior EE and CE Student at New York University! I have worked on a number of projects
             and extracurriculars that I want to showcase on this website for anyone interested!  
-            </p>    
+            </p>
+            <div class="slideshow">
+                <div class="slide fade-anim">
+                    <a href="https://www.nyurobomaster.com/home"><img src="https://cdn.discordapp.com/attachments/1057765263820455957/1057799144565112832/UltraViolet_Logo.png"></a>
+                    <div class="caption">RoboMasters Team UltraViolet</div>
+                </div>
+
+                <div class="slide fade-anim">
+                    <a href="https://gonyuathletics.com/sports/2022/7/26/egaming.aspx"><img class="esports" src="https://cdn.discordapp.com/attachments/1054167348669587517/1054167571227758712/eGaming_logo_square_png.png"></a>
+                    <div class="caption">NYU eSports</div>
+                </div>
+
+                <div class="slide fade-anim">
+                    <a href="https://engage.nyu.edu/organization/poly-gaming-network"><img src="https://cdn.discordapp.com/attachments/1054167348669587517/1054167779089068062/df633614-f9fc-430b-a355-49927f00781180cff44a-163f-4558-a5a6-617d14a2bc02_png.png"></a>
+                    <div class="caption">Poly Gaming Network</div>
+                </div>
+                <a class="prev" onclick="nextSlide(1)">&#10094;</a>
+                <a class="next" onclick="nextSlide(-1)">&#10095;</a>
+            </div>
         </section>
+
 
         <section class="projects">
-            <h3>Projects</h3>
-            <article>
+            <a href="https://github.com/mewtwoshaurd/mewtwoshaurd.github.io">
+                <img src="https://cdn.discordapp.com/attachments/1057765263820455957/1060333574005473390/you-are-here-icon-2.png">
                 <h4>This Website!</h4>
-                <p>I designed this website from scratch using HTML & CSS! All code was written and belongs to me!</p>
-                <a href="https://github.com/mewtwoshaurd/mewtwoshaurd.github.io">GitHub Link</a>
-            </article>
+                <p>I designed this website from scratch using HTML, CSS, and JS.</p>
+            </a>
 
-            <article>
-                <h4>NYU UltraViolet Robotics Embedded Programming</h4>
-                <p>
-                    I am one of our main programmers for NYU RoboMasters Team UltraViolet. I've lead the efforts
-                    in coding our Robots since Spring 2022. I also helped with the wiring of our Robots. 
-                    Now, I mostly do code reviews for our members on GitLab.
+            <a href="https://github.com/NYU-Robomaster-Ultraviolet">
+                <img src="https://cdn.discordapp.com/attachments/1057765263820455957/1057799144565112832/UltraViolet_Logo.png">
+                <h4>Robotics Embedded Programming</h4>
+                <p> I am the lead Embedded Programming C++ developer for the NYU RoboMaster Team UltraViolet.</p>
                 </p>
-                <div class="links">
-                    <h4>The Following GitHub Links are Repositories I contributed to in the past Season of RoboMasters.</h4>
-                    <a href="https://github.com/NYU-Robomaster-Ultraviolet/ultraviolet-taproot-tests/tree/shaur-dev">Taproot Tests GitHub</a>
-                    <a href="https://github.com/NYU-Robomaster-Ultraviolet/uv_taproot_template">UltraViolet Taproot</a>
-                    <a href="https://github.com/NYU-Robomaster-Ultraviolet/robomasters_2022">Working 2022 Taproot Robotics Code</a>
-                </div>
-            </article>
+            </a>
             
-            <article>
-                <h4>Intro to Game Design Projects</h4>
+            <a href="https://start.gg/torch-fest">
+                <img src="https://cdn.discordapp.com/attachments/1057765263820455957/1060335144751341568/Logod.png">
+                <h4>Smash Torch Fest</h4>
                 <p>
-                    I worked on a fun tabletop game as the main designer and scripter in Tabletop Simulator.
-                    The Steam workshop page is below.
+                    I am the Founder and Tournament Organizer of the Super Smash Bros. Tournament Series, Torch Fest.
                 </p>
-                <a href=""></a>
-            </article>
+            </a>
+
+            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2645388367">
+                <h4>Intro to Game Design Project</h4>
+                <p>
+                    I was the Lead Gameplay Designer and Lua Programmer for this tabletop game in Tabletop Simulator.
+                </p>
+            </a>
         </section>
 
+
         <section class="socials">
-            <h3>Contact Me</h3>
-            <a href="mailto:sk8753@nyu.edu"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"></a>
-            <a href="https://twitter.com/shaur_k"><img src="https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png" alt=""></a>
-            <a href="https://www.linkedin.com/in/shaurya-kumar-442840181/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a>
-            <h3>Other Links</h3>
-            <a href=""></a>
-            <a href=""></a>
+            <article class="contact-me">
+                <a class="social" href="mailto:sk8753@nyu.edu">My Email</a>
+                <a class="social" href="https://www.linkedin.com/in/shaurya-kumar-442840181/">My Linkedin</a>
+                <a class="social" href="https://github.com/mewtwoshaurd">My GitHub</a>
+                <a class="social" href="https://twitter.com/shaur_k">My Twitter</a>
+                <a class="social" href="https://drive.google.com/file/d/1_vbSpkrBi_pNwVl8rm0dCGDGRBKcnMVj/view?usp=sharing">My Resume</a>
+            </article>
         </section>
     </body>
 </html>
