@@ -44,7 +44,7 @@ body, html
 
 .personal-info > section > ul
 {
-    flex: 4 175px;
+    flex: 4 300px;
     columns: 2;
 }
 
