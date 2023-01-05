@@ -39,7 +39,13 @@ body, html
 
 .personal-info > p
 {
-    flex: 8 200px;
+    flex: 2 200px;
+}
+
+.personal-info > section > ul
+{
+    flex: 4 175px;
+    columns: 2;
 }
 
 .slideshow
