@@ -1,5 +1,4 @@
 let index = 1;
-showSlide(index);
 
 function nextSlide(i)
 {

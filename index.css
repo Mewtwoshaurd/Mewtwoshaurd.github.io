@@ -84,11 +84,6 @@ body, html
     width: 200px;
 }
 
-img.esports
-{
-    background-color: #e2e1dd;
-}
-
 .prev, .next 
 {
     cursor: pointer;
