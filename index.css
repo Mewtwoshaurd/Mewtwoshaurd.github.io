@@ -1,69 +1,68 @@
-body, html
-{
-    background-color: #F5E0D6;
+:root {
+    --bar-heading: #363635;
+    --page-outline: #595a4a;
+    --color-one: #b3c0d1;
+    --color-two: #e7c5ce;
+}
+
+body, html {
+    background-color: var(--page-outline);
     height: 100%;
 }
 
-.heading
-{
+.heading {
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color: #F5C0FA;
+    background-color: var(--color-one);
     color: black;
     height: auto;
     width: auto;
 }
 
-.heading > h1
-{
+.heading > h1 {
     font: 50px "Lucida Console", monospace;
 }
 
-.heading > h2
-{
+.heading > h2 {
     font: 25px "Courier New", monospace;
+    text-align: center;
 }
 
-.personal-info
-{
+.personal-info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #a1fafd;
+    background-color: var(--color-two);
     height: auto;
     width: auto;
     font: 20px "Alata", Verdana, sans-serif;
 }
 
-.personal-info > p
-{
+.personal-info > p {
     flex: 2 200px;
+    padding: 4px;
 }
 
-.personal-info > section > ul
-{
+.personal-info > section > ul {
     flex: 4 300px;
     columns: 2;
 }
 
-.slideshow
-{
+.slideshow {
     position: relative;
     margin: auto;
     flex: 1 300px;
 }
 
-.slide
-{
+.slide {
     display: none;
     flex-direction: column;
     align-items: center;
 }
 
-.fade-anim
-{
+.fade-anim {
     animation: fade 1.5s;
 }
 
@@ -78,21 +77,19 @@ body, html
     }
 }
 
-.slide > a > img
-{
+.slide > a > img {
     height: 200px;
     width: 200px;
 }
 
-.prev, .next 
-{
+.prev, .next  {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: #DB2763;
+    color: var(--bar-heading);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -100,25 +97,21 @@ body, html
     user-select: none;
 }
 
-.next 
-{
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover 
-{
-    background-color: #DB2763;
-    color: #FFDFA4;
+.prev:hover, .next:hover {
+    background-color: var(--bar-heading);
+    color: white;
 }
 
-.prev:active, .next:active
-{
-    background-color: #F5C0FA;
+.prev:active, .next:active {
+    background-color: white;
 }
   
-.text 
-{
+.text {
     font-size: 15px;
     font-family: "Avant Garde";
     padding: 8px 12px;
@@ -128,24 +121,22 @@ body, html
     text-align: center;
 }
 
-.projects
-{
+.projects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #F5C0FA;
+    background-color: var(--color-one);
     height: auto;
     width: auto;
     font: 16px "Alata", Verdana, sans-serif;
     padding-bottom: 20px;
 }
 
-.projects > a:link, .projects > a:visited
-{
+.projects > a:link, .projects > a:visited {
     flex: 1;
     width: 50px;
-    border: solid 2px #db2763;
+    border: solid 2px var(--bar-heading);
     margin: 3%;
     color: black;
     text-decoration: none;
@@ -154,38 +145,33 @@ body, html
     transition: background-color 0.5s;
 }
 
-.projects > a:hover
-{
-    background-color: #DB2763;
-    border-color: #FFDFA4;
+.projects > a:hover {
+    background-color: var(--bar-heading);
+    border-color: var(--page-outline);
 }
 
-.projects > a:active
-{
-    background-color: #a1fafd;
+.projects > a:active {
+    background-color: var(--page-outline);
 }
 
-.projects > a > img
-{
+.projects > a > img {
     height: auto;
     width: 70px;
 }
 
-.contact-me
-{
+.contact-me {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #FFDFA4;
+    background-color: var(--bar-heading);
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-.social:link, .social:visited
-{
-    color: black;
-    border: solid 2px #db2763;
+.social:link, .social:visited {
+    color: white;
+    border: solid 2px var(--color-one);
     padding: 14px 25px;
     font: 20px "Alata", Verdana, sans-serif;
     text-align: center;
@@ -195,26 +181,23 @@ body, html
     transition: background-color 0.5s;
 }
 
-.social:hover
-{
-    background-color: #db2763;
-    border-color: #FFDFA4;
+.social:hover {
+    background-color: var(--color-one);
+    border-color: var(--color-two);
+    color: var(--bar-heading)
 }
 
-.social:active
-{
-    background-color: #e2e1dd;
+.social:active {
+    background-color: var(--page-outline);
 }
 
-.imgheading
-{
+.imgheading {
     background-image: url(https://cdn.discordapp.com/attachments/1057765263820455957/1057791635787878480/IMG_7808.jpg);
     height: 70%;
     opacity: 0.45;
 }
 
-.imgheading, .imgpinfo, .imgprojects, .imgsocials
-{
+.imgheading, .imgpinfo, .imgprojects, .imgsocials {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
