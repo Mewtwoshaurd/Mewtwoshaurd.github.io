@@ -1,12 +1,14 @@
 :root {
-    --bar-heading: #363635;
-    --page-outline: #595a4a;
-    --color-one: #b3c0d1;
-    --color-two: #e7c5ce;
+    --darkgrey: #1f2833;
+    --blackest: #ffffff;
+    --neutral: #c5c6c7;
+    --highlight-one: #66fcf1;
+    --highlight-two: #45a29e;
+    --whitest: #FCFBF4;
 }
 
 body, html {
-    background-color: var(--page-outline);
+    background-color: var(--darkgrey);
     height: 100%;
 }
 
@@ -14,19 +16,20 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color: var(--color-one);
-    color: black;
+    background-color: var(--darkgrey);
     height: auto;
     width: auto;
 }
 
 .heading > h1 {
     font: 50px "Lucida Console", monospace;
+    color: var(--highlight-one);
 }
 
 .heading > h2 {
     font: 25px "Courier New", monospace;
     text-align: center;
+    color: var(--highlight-one);
 }
 
 .personal-info {
@@ -34,20 +37,26 @@ body, html {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    background-color: var(--color-two);
+    background-color: var(--blackest);
     height: auto;
     width: auto;
     font: 20px "Alata", Verdana, sans-serif;
 }
 
+.personal-info > section {
+    color: var(--darkgrey)
+}
+
 .personal-info > p {
     flex: 2 200px;
     padding: 4px;
+    color: #000000;
 }
 
 .personal-info > section > ul {
     flex: 4 300px;
     columns: 2;
+    color: #000000;
 }
 
 .slideshow {
@@ -88,8 +97,9 @@ body, html {
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 16px;
-    color: var(--bar-heading);
+    padding: 24px;
+    color: var(--highlight-one);
+    background-color: var(--darkgrey);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -103,8 +113,8 @@ body, html {
 }
 
 .prev:hover, .next:hover {
-    background-color: var(--bar-heading);
-    color: white;
+    background-color: var(--highlight-one);
+    color: var(--darkgrey);
 }
 
 .prev:active, .next:active {
@@ -126,7 +136,7 @@ body, html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: var(--color-one);
+    background-color: var(--blackest);
     height: auto;
     width: auto;
     font: 16px "Alata", Verdana, sans-serif;
@@ -136,9 +146,9 @@ body, html {
 .projects > a:link, .projects > a:visited {
     flex: 1;
     width: 50px;
-    border: solid 2px var(--bar-heading);
+    border: solid 2px var(--highlight-one);
     margin: 3%;
-    color: black;
+    color:var(--highlight-two);
     text-decoration: none;
     text-align: center;
     padding: 10px;
@@ -146,8 +156,9 @@ body, html {
 }
 
 .projects > a:hover {
-    background-color: var(--bar-heading);
-    border-color: var(--page-outline);
+    background-color: var(--highlight-two);
+    border-color: var(--blackest);
+    color: var(--darkgrey);
 }
 
 .projects > a:active {
@@ -159,19 +170,29 @@ body, html {
     width: 70px;
 }
 
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--whitest);
+    position: fixed;
+    top: 0;
+}
+
 .contact-me {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--bar-heading);
+    background-color: var(--whitest);
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 50%;
+    width: 50%;
 }
 
 .social:link, .social:visited {
-    color: white;
-    border: solid 2px var(--color-one);
+    color: var(--darkgrey);
+    border: solid 2px var(--highlight-one);
     padding: 14px 25px;
     font: 20px "Alata", Verdana, sans-serif;
     text-align: center;
@@ -182,25 +203,35 @@ body, html {
 }
 
 .social:hover {
-    background-color: var(--color-one);
-    border-color: var(--color-two);
-    color: var(--bar-heading)
+    background-color: var(--highlight-two);
+    border-color: var(--highlight-one);
+    color: var(--blackest)
 }
 
 .social:active {
     background-color: var(--page-outline);
 }
 
-.imgheading {
-    background-image: url(assets/IMG_1084.jpg);
-    height: 70%;
-    opacity: 0.45;
-}
-
-.imgheading, .imgpinfo, .imgprojects, .imgsocials {
+.imgpinfo, .imgprojects, .imgsocials {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.8;
+}
+
+.imgheading {
+    height: 20vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.collapse {
+    background-color: var(--whitest);
+    cursor: pointer;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
 }
