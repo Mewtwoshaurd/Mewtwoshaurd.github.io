@@ -148,6 +148,7 @@ body, html {
 .projects > a:hover {
     background-color: var(--bar-heading);
     border-color: var(--page-outline);
+    color: white;
 }
 
 .projects > a:active {
