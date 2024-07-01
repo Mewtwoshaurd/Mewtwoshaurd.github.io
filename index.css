@@ -1,8 +1,9 @@
 :root {
     --bar-heading: #363635;
     --page-outline: #595a4a;
-    --color-one: #b3c0d1;
-    --color-two: #e7c5ce;
+    --color-one: #f0f7ee;
+    --color-two: #BABFD1;
+    --white: #ffffff;
 }
 
 body, html {
@@ -32,34 +33,59 @@ body, html {
 .personal-info {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     background-color: var(--color-two);
     height: auto;
-    width: auto;
+    width: 100%;
     font: 20px "Alata", Verdana, sans-serif;
 }
 
-.personal-info > p {
-    flex: 2 200px;
-    padding: 4px;
+.skill-group {
+    background-color: var(--bar-heading);
+    border: dotted 2px var(--white);
+    margin: 2%;
+    color: var(--white);
+    transition: background-color 0.5s;
 }
 
-.personal-info > section > ul {
-    flex: 4 300px;
-    columns: 2;
+.skill-group:hover {
+    background-color: var(--white);
+    border: solid 3px var(--bar-heading);
+    color: var(--bar-heading)
+}
+
+.skill-group > ul {
+    columns: auto 2;
 }
 
 .slideshow {
     position: relative;
     margin: auto;
     flex: 1 300px;
+    background-color: var(--color-two);
 }
 
 .slide {
     display: none;
     flex-direction: column;
     align-items: center;
+}
+
+.slide > a {
+    padding: 1%;
+    background-color: var(--bar-heading);
+    border: dotted 3px #ffffff;
+    transition: background-color 0.5s;
+}
+
+.slide > a:hover {
+    background-color: #ffffff;
+    border: solid 3px #000000;
+}
+
+.caption {
+    background-color: white;
 }
 
 .fade-anim {
@@ -89,12 +115,14 @@ body, html {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: var(--bar-heading);
+    color: #ffffff;
+    background-color: #363635;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    border: dotted 2px #ffffff;
 }
 
 .next {
@@ -103,12 +131,13 @@ body, html {
 }
 
 .prev:hover, .next:hover {
-    background-color: var(--bar-heading);
-    color: white;
+    background-color: #ffffff;
+    color: #000000;
+    border: solid 2px #000000;
 }
 
 .prev:active, .next:active {
-    background-color: white;
+    background-color: black;
 }
   
 .text {
@@ -141,6 +170,7 @@ body, html {
     color: black;
     text-decoration: none;
     text-align: center;
+    background-color: #ffffff;
     padding: 10px;
     transition: background-color 0.5s;
 }
@@ -171,7 +201,7 @@ body, html {
 }
 
 .social:link, .social:visited {
-    color: white;
+    color: var(--color-two);
     border: solid 2px var(--color-one);
     padding: 14px 25px;
     font: 20px "Alata", Verdana, sans-serif;
