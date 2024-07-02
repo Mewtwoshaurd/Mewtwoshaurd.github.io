@@ -195,31 +195,30 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--whitest);
-    position: fixed;
     top: 0;
 }
 
 .contact-me {
-    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: var(--whitest);
+    position: relative;
+    display: none;
+    opacity: 0;
+}
+
+.socials {
+    background-color: none;
     position: fixed;
-    top: 0;
-    left: 50%;
-    width: 50%;
+    top: 0px;
+    padding: 0px;
 }
 
 .social:link, .social:visited {
+    background-color: var(--whitest);
+    margin: 5%;
     color: var(--darkgrey);
-    border: solid 2px var(--highlight-one);
-    padding: 14px 25px;
-    font: 20px "Alata", Verdana, sans-serif;
-    text-align: center;
-    text-decoration: none;
-    font-family: "Avant Garde";
-    display: inline-block;
+    border: dotted 2px var(--highlight-one);
     transition: background-color 0.5s;
 }
 
@@ -233,7 +232,7 @@ body, html {
     background-color: var(--darkgrey);
 }
 
-.imgpinfo, .imgprojects, .imgsocials {
+.imgheading, .imgpinfo, .imgprojects, .imgsocials {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -242,17 +241,41 @@ body, html {
 }
 
 .imgheading {
-    height: 20vh;
-    overflow: hidden;
-    position: relative;
+    background-image: url(assets/IMG_4519.png);
+    height: 60%;
+    opacity: 0.9;
+    background-position: center;
 }
 
-.collapse {
-    background-color: var(--whitest);
+#collapse {
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    outline: none;
+}
+
+#collapse > img {
+    border: dotted 2px var(--highlight-one);
+    background-color: var(--darkgrey);
+    height: 96px;
+    width: 96px;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s;
+}
+
+#collapse:hover > img, #collapse:focus > img {
+    border: solid 2px var(--highlight-two);
+    background-color: var(--whitest);
 }
 
 .logo {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
+}
+
+.contact-me.show {
+    opacity: 1;
+    display: flex;
 }

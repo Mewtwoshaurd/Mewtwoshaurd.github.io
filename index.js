@@ -28,3 +28,9 @@ function showSlide(i)
     }
     slides[index-1].style.display = "flex";
 }
+
+window.addEventListener("load", (event) => {
+    document.getElementById("collapse").addEventListener("click", function dropDown() 
+{
+    document.getElementsByClassName("contact-me")[0].classList.toggle("show")
+})});
