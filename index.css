@@ -1,11 +1,5 @@
 :root {
-    --bar-heading: #363635;
-    --page-outline: #595a4a;
-    --color-one: #f0f7ee;
-    --color-two: #BABFD1;
-    --white: #ffffff;
-    --darkgrey: #1f2833;
-    --blackest: #ffffff;
+    --darkgrey: #1f2833;;
     --neutral: #c5c6c7;
     --highlight-one: #66fcf1;
     --highlight-two: #45a29e;
@@ -41,24 +35,24 @@ body, html {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--blackest);
+    background-color: var(--whitest);
     height: auto;
     width: 100%;
     font: 20px "Alata", Verdana, sans-serif;
 }
 
 .skill-group {
-    background-color: var(--bar-heading);
-    border: dotted 2px var(--white);
+    background-color: var(--darkgrey);
+    border: dotted 2px var(--whitest);
     margin: 2%;
-    color: var(--white);
+    color: var(--whitest);
     transition: background-color 0.5s;
 }
 
 .skill-group:hover {
-    background-color: var(--white);
-    border: solid 3px var(--bar-heading);
-    color: var(--bar-heading)
+    background-color: var(--whitest);
+    border: solid 3px var(--darkgrey);
+    color: var(--darkgrey)
 }
 
 .skill-group > ul {
@@ -66,27 +60,11 @@ body, html {
 
 }
 
-.personal-info > section {
-    color: var(--darkgrey)
-}
-
-.personal-info > p {
-    flex: 2 200px;
-    padding: 4px;
-    color: #000000;
-}
-
-.personal-info > section > ul {
-    flex: 4 300px;
-    columns: 2;
-    color: #000000;
-}
-
 .slideshow {
     position: relative;
     margin: auto;
     flex: 1 300px;
-    background-color: var(--color-two);
+    background-color: var(--highlight-two);
 }
 
 .slide {
@@ -97,18 +75,18 @@ body, html {
 
 .slide > a {
     padding: 1%;
-    background-color: var(--bar-heading);
-    border: dotted 3px #ffffff;
+    background-color: var(--darkgrey);
+    border: dotted 3px var(--whitest);
     transition: background-color 0.5s;
 }
 
 .slide > a:hover {
-    background-color: #ffffff;
-    border: solid 3px #000000;
+    background-color: var(--whitest);
+    border: solid 3px var(--darkgrey);
 }
 
 .caption {
-    background-color: white;
+    background-color: var(--whitest);
 }
 
 .fade-anim {
@@ -145,7 +123,7 @@ body, html {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    border: dotted 2px #ffffff;
+    border: dotted 2px var(--whitest);
 }
 
 .next {
@@ -154,13 +132,13 @@ body, html {
 }
 
 .prev:hover, .next:hover {
-    border: solid 2px #000000;
+    border: solid 2px var(--darkgrey);
     background-color: var(--highlight-one);
     color: var(--darkgrey);
 }
 
 .prev:active, .next:active {
-    background-color: black;
+    background-color: var(--darkgrey);
 }
   
 .text {
@@ -178,7 +156,7 @@ body, html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: var(--blackest);
+    background-color: var(--whitest);
     height: auto;
     width: auto;
     font: 16px "Alata", Verdana, sans-serif;
@@ -193,19 +171,19 @@ body, html {
     color:var(--highlight-two);
     text-decoration: none;
     text-align: center;
-    background-color: #ffffff;
+    background-color: var(--whitest);
     padding: 10px;
     transition: background-color 0.5s;
 }
 
 .projects > a:hover {
     background-color: var(--highlight-two);
-    border-color: var(--blackest);
+    border-color: var(--whitest);
     color: var(--darkgrey);
 }
 
 .projects > a:active {
-    background-color: var(--page-outline);
+    background-color: var(--darkgrey);
 }
 
 .projects > a > img {
@@ -252,7 +230,7 @@ body, html {
 }
 
 .social:active {
-    background-color: var(--page-outline);
+    background-color: var(--darkgrey);
 }
 
 .imgpinfo, .imgprojects, .imgsocials {
