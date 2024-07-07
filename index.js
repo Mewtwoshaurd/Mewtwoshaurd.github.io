@@ -1,4 +1,4 @@
-let index = 1;
+let index = 0;
 
 function nextSlide(i)
 {

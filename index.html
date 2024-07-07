@@ -17,10 +17,12 @@
         </section>
 
         <!-- cool intro heading with quote and interests -->
-        <section class="heading">
-            <h1>Shaurya Kumar</h1>
-            <h2>"Write your self...Only then will the immense resources of the unconscious spring forth."</h2>
-            <h2>Full Stack Development, Platform Engineering, Mobile Robotics, Game Development</h2>
+        <section class="heading_container">
+            <section class="heading">
+                <h1>Shaurya Kumar</h1>
+                <h2>"Write your self...Only then will the immense resources of the unconscious spring forth."</h2>
+                <h2>Full Stack Development, Platform Engineering, Mobile Robotics, Game Development</h2>
+            </section>
         </section>
 
         <!-- all my personal info, including name and programming languages and a slideshow of all my clubs-->
@@ -71,24 +73,26 @@
             </section>
         </section>
         <!-- current clubs/work slideshow with links-->
-        <div class="slideshow">
-            <div class="slide fade-anim">
-                <a target="_blank" href="https://www.nyurobomaster.com/home"><img src="assets/UltraViolet_Logo.png"></a>
-                <div class="caption">RoboMasters Team UltraViolet</div>
-            </div>
+        <section class="slideshow_container">
+            <div class="slideshow">
+                <div class="slide fade-anim">
+                    <a target="_blank" href="https://www.nyurobomaster.com/home"><img src="assets/UltraViolet_Logo.png"></a>
+                    <div class="caption">RoboMasters Team UltraViolet</div>
+                </div>
 
-            <div class="slide fade-anim">
-                <a href="https://gonyuathletics.com/sports/2022/7/26/egaming.aspx" target="_blank"><img src="assets/esports_logo.png"></a>
-                <div class="caption">NYU eSports</div>
-            </div>
+                <div class="slide fade-anim">
+                    <a href="https://gonyuathletics.com/sports/2022/7/26/egaming.aspx" target="_blank"><img src="assets/esports_logo.png"></a>
+                    <div class="caption">NYU Esports</div>
+                </div>
 
-            <div class="slide fade-anim">
-                <a href="https://engage.nyu.edu/organization/poly-gaming-network" target="_blank"><img src="assets/discord480.png"></a>
-                <div class="caption">Poly Gaming Network</div>
+                <div class="slide fade-anim">
+                    <a href="https://engage.nyu.edu/organization/poly-gaming-network" target="_blank"><img src="assets/discord480.png"></a>
+                    <div class="caption">Poly Gaming Network</div>
+                </div>
+                <a class="prev" onclick="nextSlide(1)">&#10094;</a>
+                <a class="next" onclick="nextSlide(-1)">&#10095;</a>
             </div>
-            <a class="prev" onclick="nextSlide(1)">&#10094;</a>
-            <a class="next" onclick="nextSlide(-1)">&#10095;</a>
-        </div>
+        </section>
 
         <!-- each projects section houses up to 4 projects for display-->
         <section class="projects">

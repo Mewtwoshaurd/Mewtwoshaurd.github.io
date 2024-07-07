@@ -6,18 +6,56 @@
     --whitest: #FCFBF4;
 }
 
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes pan_bg {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+@keyframes pan_bg_2 {
+    0% {
+        background-position: 25% 0%;
+    }
+    100% {
+        background-position: 125% 0%;
+    }
+}
+
 body, html {
     background-color: var(--darkgrey);
     height: 100%;
+}
+
+.heading_container {
+    background: radial-gradient(rgb(var(--highlight-two)), rgb(var(--darkgrey)));;
+    height: 20%;
+    overflow: hidden;
+    position: relative;
 }
 
 .heading {
     display: flex;
     flex-direction: column;
     align-items:center;
-    background-color: var(--darkgrey);
+    background-image: url("assets/triforce_repeat.png");
+    background-size: 10%;
+    background-blend-mode: lighten;
+    animation: pan_bg 180s linear infinite;
     height: auto;
-    width: auto;
+    width: 100%;
+    position: absolute;
 }
 
 .heading > h1 {
@@ -60,11 +98,21 @@ body, html {
 
 }
 
-.slideshow {
+.slideshow_container {
+    background: var(--highlight-two);
+    height: 20%;
+    overflow: hidden;
     position: relative;
+}
+
+.slideshow {
+    position: absolute;
+    width: 100%;
     margin: auto;
     flex: 1 300px;
-    background-color: var(--highlight-two);
+    background-image: url(assets/anchor_repeat.png);
+    background-size: 10%;
+    animation: pan_bg_2 180s linear infinite;
 }
 
 .slide {
@@ -87,21 +135,11 @@ body, html {
 
 .caption {
     background-color: var(--whitest);
+    font: 20px "Alata", Verdana, sans-serif
 }
 
 .fade-anim {
     animation: fade 1.5s;
-}
-
-@keyframes fade {
-    from 
-    {
-        opacity: .4
-    }
-    to 
-    {
-        opacity: 1
-    }
 }
 
 .slide > a > img {
