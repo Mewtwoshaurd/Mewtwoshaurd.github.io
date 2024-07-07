@@ -151,8 +151,7 @@ body, html {
     align-items:center;
     background-image: url("assets/triforce_repeat.png");
     background-size: 10%;
-    background-blend-mode: lighten;
-    animation: pan_bg 180s linear infinite;
+    animation: pan_bg 45s linear infinite;
     height: auto;
     width: 100%;
     position: absolute;
@@ -215,7 +214,7 @@ body, html {
     flex: 1 300px;
     background-image: url(assets/anchor_repeat.png);
     background-size: 10%;
-    animation: pan_bg_2 180s linear infinite;
+    animation: pan_bg_2 50s linear(1, 0) infinite;
 }
 
 .slide {
