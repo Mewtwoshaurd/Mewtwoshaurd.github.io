@@ -83,8 +83,10 @@ body, html {
     background-color: var(--darkgrey);
     border: dotted 2px var(--whitest);
     margin: 2%;
+    width: 25%;
     color: var(--whitest);
     transition: background-color 0.5s;
+    text-align: center;
 }
 
 .skill-group:hover {
@@ -94,8 +96,7 @@ body, html {
 }
 
 .skill-group > ul {
-    columns: auto 2;
-
+    columns: auto 200px;
 }
 
 .slideshow_container {
@@ -204,20 +205,20 @@ body, html {
 .projects > a:link, .projects > a:visited {
     flex: 1;
     width: 50px;
-    border: solid 2px var(--highlight-one);
+    border: dotted 2px var(--darkgrey);
     margin: 3%;
-    color:var(--highlight-two);
+    color: var(--darkgrey);
     text-decoration: none;
     text-align: center;
-    background-color: var(--whitest);
+    background-color: var(--highlight-two);
     padding: 10px;
     transition: background-color 0.5s;
 }
 
 .projects > a:hover {
-    background-color: var(--highlight-two);
-    border-color: var(--whitest);
-    color: var(--darkgrey);
+    background-color: var(--whitest);
+    border: solid 2px var(--highlight-one);
+    color:var(--highlight-two);
 }
 
 .projects > a:active {
