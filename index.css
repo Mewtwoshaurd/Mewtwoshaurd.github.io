@@ -1,3 +1,4 @@
+/* document colors */
 :root {
     --darkgrey: #1f2833;;
     --neutral: #c5c6c7;
@@ -6,6 +7,7 @@
     --whitest: #FCFBF4;
 }
 
+/* document animations */
 @keyframes fade {
     from {
         opacity: .4
@@ -33,11 +35,109 @@
     }
 }
 
+
+/*styling begins here*/
 body, html {
     background-color: var(--darkgrey);
     height: 100%;
 }
 
+/*
+    collapsable menu stylization, including social links
+*/
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+}
+
+.contact-me {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    display: none;
+    opacity: 0;
+}
+
+.socials {
+    background-color: none;
+    position: fixed;
+    top: 0px;
+    padding: 0px;
+}
+
+.social:link, .social:visited {
+    background-color: var(--whitest);
+    margin: 5%;
+    color: var(--darkgrey);
+    border: dotted 2px var(--highlight-one);
+    transition: background-color 0.5s;
+}
+
+.social:hover {
+    background-color: var(--highlight-two);
+    border-color: var(--highlight-one);
+    color: var(--blackest)
+}
+
+.social:active {
+    background-color: var(--darkgrey);
+}
+
+#collapse {
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    outline: none;
+}
+
+#collapse > img {
+    border: dotted 2px var(--highlight-one);
+    background-color: var(--darkgrey);
+    height: 96px;
+    width: 96px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s;
+}
+
+#collapse:hover > img, #collapse:focus > img {
+    border: solid 2px var(--highlight-two);
+    background-color: var(--whitest);
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+
+.contact-me.show {
+    opacity: 1;
+    display: flex;
+}
+
+/* 
+    images, particularly scrollable image heading background
+*/
+.imgheading, .imgpinfo, .imgprojects, .imgsocials {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.imgheading {
+    background-image: url(assets/IMG_4519.png);
+    height: 60%;
+    opacity: 0.9;
+    background-position: center;
+}
+
+/*heading stylization, includes container and sliding background*/
 .heading_container {
     background: radial-gradient(rgb(var(--highlight-two)), rgb(var(--darkgrey)));;
     height: 20%;
@@ -69,6 +169,8 @@ body, html {
     color: var(--highlight-one);
 }
 
+
+/*skill group section, including slideshow of clubs and such*/
 .personal-info {
     display: flex;
     flex-direction: row;
@@ -139,6 +241,7 @@ body, html {
     font: 20px "Alata", Verdana, sans-serif
 }
 
+/*for slides to have that nice fade animation*/
 .fade-anim {
     animation: fade 1.5s;
 }
@@ -179,16 +282,10 @@ body, html {
 .prev:active, .next:active {
     background-color: var(--darkgrey);
 }
-  
-.text {
-    font-size: 15px;
-    font-family: "Avant Garde";
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
+
+/*
+    projects section, including link stylization and animations
+*/
 
 .projects {
     display: flex;
@@ -228,93 +325,4 @@ body, html {
 .projects > a > img {
     height: auto;
     width: 70px;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    top: 0;
-}
-
-.contact-me {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    display: none;
-    opacity: 0;
-}
-
-.socials {
-    background-color: none;
-    position: fixed;
-    top: 0px;
-    padding: 0px;
-}
-
-.social:link, .social:visited {
-    background-color: var(--whitest);
-    margin: 5%;
-    color: var(--darkgrey);
-    border: dotted 2px var(--highlight-one);
-    transition: background-color 0.5s;
-}
-
-.social:hover {
-    background-color: var(--highlight-two);
-    border-color: var(--highlight-one);
-    color: var(--blackest)
-}
-
-.social:active {
-    background-color: var(--darkgrey);
-}
-
-.imgheading, .imgpinfo, .imgprojects, .imgsocials {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.8;
-}
-
-.imgheading {
-    background-image: url(assets/IMG_4519.png);
-    height: 60%;
-    opacity: 0.9;
-    background-position: center;
-}
-
-#collapse {
-    border: none;
-    background-color: transparent;
-    overflow: hidden;
-    outline: none;
-}
-
-#collapse > img {
-    border: dotted 2px var(--highlight-one);
-    background-color: var(--darkgrey);
-    height: 96px;
-    width: 96px;
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.5s;
-}
-
-#collapse:hover > img, #collapse:focus > img {
-    border: solid 2px var(--highlight-two);
-    background-color: var(--whitest);
-}
-
-.logo {
-    width: 64px;
-    height: 64px;
-}
-
-.contact-me.show {
-    opacity: 1;
-    display: flex;
 }
