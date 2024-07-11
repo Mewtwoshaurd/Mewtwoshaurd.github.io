@@ -140,7 +140,7 @@ body, html {
 /*heading stylization, includes container and sliding background*/
 .heading_container {
     background: radial-gradient(rgb(var(--highlight-two)), rgb(var(--darkgrey)));;
-    height: 20%;
+    height: 26%;
     overflow: hidden;
     position: relative;
 }
